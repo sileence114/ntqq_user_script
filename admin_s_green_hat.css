@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           admin_s_green_hat
+@description    让管理员戴回绿帽（将管理员头衔颜色重新改为绿色）
+@preprocessor   transitio
+@version        0.1.0
+@author         sileence114
+@license     	gpl-3.0
+@var raw tag_aqua_text_light "亮色字体颜色" "#08d4d0ff"
+@var raw tag_aqua_bg_light   "亮色背景颜色" "#00dbbe33"
+@var raw tag_aqua_text_dark  "暗色字体颜色" "#08d9d3ff"
+@var raw tag_aqua_bg_dark    "暗色背景颜色" "#00dbba33"
+==/UserStyle== */
+/* 让管理员戴回绿帽（将管理员头衔颜色重新改为绿色） */
+
+.q-theme-tokens-light{
+    --tag_aqua_text: var(--tag_aqua_text_light);
+    --tag_aqua_bg: var(--tag_aqua_bg_light);
+}
+.q-theme-tokens-dark{
+    --tag_aqua_text: var(--tag_aqua_text_dark);
+    --tag_aqua_bg: var(--tag_aqua_bg_dark);
+}
+.q-tag--blue {
+    background-color: var(--tag_aqua_bg);
+    color: var(--tag_aqua_text);
+}
