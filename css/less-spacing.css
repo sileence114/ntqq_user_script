@@ -1,0 +1,60 @@
+/* ==UserStyle==
+@name           less_spacing
+@description    减少元素间距
+@preprocessor   transitio
+@version        0.1.0
+@homepageURL    https://github.com/sileence114/ntqq_user_script/blob/main/README.md#less_spacing
+@author         sileence114
+@license     	gpl-3.0
+==/UserStyle== */
+/* 减少元素间距 */
+
+
+/* 消息列表 */
+div.recent-contact .recent-contact-list .item__content{
+    padding: 8px !important; 
+}
+
+/* 聊天区域 */
+.list .message{
+    padding-bottom: 4px !important;
+    /* 时间戳 */
+    &>.message__timestamp{
+        margin: 8px 0 0 0 !important;
+    }
+    /* 消息气泡 */
+    &>.message-container{
+        padding: 0px 10px !important;
+        &>.message-content__wrapper{
+            min-height: initial !important;
+            &>.msg-content-container{
+                padding: 4px 10px !important;
+                &>.mix-message__inner{
+                    min-height: initial !important;
+                }
+                /* 引用内容 */
+                &>.reply-message__inner>.reply-element{
+                    padding: 2px 5px !important;
+                    margin: 0 !important;
+                    & .reply-title{
+                        margin-bottom: 2px !important;
+                    }
+                    & .reply-content>.mixed-container{
+                        min-height: initial !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 群聊边栏 */
+/* 虚拟滚动区域列表元素数量有限，会露出空白的列表元素 */
+/* div.group-box{
+    &>.group-member>.group-member__main>.group-member-list>.viewport-list>.viewport-list__inner>.group-user{
+        padding: 4px 0 !important;
+        &>.group-user__content{
+            padding: 2px 4px !important;
+        }
+    }
+} */
