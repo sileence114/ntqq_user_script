@@ -7,7 +7,7 @@ NTQQ 相关用户自定义脚本
 
 
 ## user css
-### [admin_s_green_hat](https://raw.githubusercontent.com/sileence114/ntqq_user_script/refs/heads/main/css/admin_s_green_hat.css)
+### [admin-s_green-hat](https://raw.githubusercontent.com/sileence114/ntqq_user_script/refs/heads/main/css/admin-s-green-hat.css)
 | 浅色模式 | 深色模式 |
 | --- | --- |
 | ![b6ab7d2a3bcc1dc8516639d2e46cd098](https://github.com/user-attachments/assets/5d387de6-6c7a-405f-a1af-70d0f39e1c81) | ![c8d162630b23e6fe11fb8a6e0a5b9eb6](https://github.com/user-attachments/assets/9552b6ac-57fc-4a9d-b184-0407e981fa7d) |
