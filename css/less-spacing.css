@@ -2,7 +2,7 @@
 @name           less-spacing
 @description    减少元素间距
 @preprocessor   transitio
-@version        0.1.0
+@version        0.2.0
 @homepageURL    https://github.com/sileence114/ntqq_user_script/blob/main/README.md#less-spacing
 @author         sileence114
 @license     	gpl-3.0
@@ -11,50 +11,83 @@
 
 
 /* 消息列表 */
-div.recent-contact .recent-contact-list .item__content{
-    padding: 8px !important; 
+div.recent-contact .recent-contact-list .item__content:not(#_important){
+    padding: 8px; 
 }
 
 /* 聊天区域 */
-.list .message{
-    padding-bottom: 4px !important;
+.list .message:not(#_important){
+    padding-bottom: 4px;
     /* 时间戳 */
     &>.message__timestamp{
-        margin: 8px 0 0 0 !important;
+        margin: 8px 0 0 0;
     }
     /* 消息气泡 */
     &>.message-container{
-        padding: 0px 10px !important;
+        padding: 0px 10px;
         &>.message-content__wrapper{
-            min-height: initial !important;
+            min-height: initial;
             &>.msg-content-container{
-                padding: 4px 10px !important;
                 &>.mix-message__inner{
-                    min-height: initial !important;
+                    min-height: initial;
                 }
                 /* 引用内容 */
                 &>.reply-message__inner>.reply-element{
-                    padding: 2px 5px !important;
-                    margin: 0 !important;
+                    padding: 2px 5px;
+                    margin: 0;
                     & .reply-title{
-                        margin-bottom: 2px !important;
+                        margin-bottom: 2px;
                     }
                     & .reply-content>.mixed-container{
-                        min-height: initial !important;
+                        min-height: initial;
                     }
                 }
+            }
+            /* 转发消息 */
+            &>.forward-msg{
+                padding: 4px 12px;
+                &>.text-ellipsis{
+                    padding: 0;
+                    margin: 0;
+                }
+                &>.count{
+                    padding-top: 2px;
+                    margin-top: 4px;
+                }
+            }
+            /* 文字消息、语音消息保留边距 */
+            &>.msg-content-container:has(:is(.text-element, .ptt-message__inner)){
+                padding: 2px 12px;
+                border-radius: 10px;
             }
         }
     }
 }
 
-/* 群聊边栏 */
-/* 虚拟滚动区域列表元素数量有限，会露出空白的列表元素 */
-/* div.group-box{
+/* 群聊边栏 虚拟滚动区域列表元素数量有限，会露出空白的列表元素 */
+/* div.group-box:not(#_important){
     &>.group-member>.group-member__main>.group-member-list>.viewport-list>.viewport-list__inner>.group-user{
-        padding: 4px 0 !important;
+        padding: 4px 0;
         &>.group-user__content{
-            padding: 2px 4px !important;
+            padding: 2px 4px;
         }
     }
 } */
+
+
+/* 适配轻量工具箱 TG 模式 */
+.merge-message:not(#_important) .merge:not(#_important){
+    &.merge-main{
+        padding: 6px 2px 2px;
+        & .msg-content-container{
+            border-bottom-left-radius: 4px;
+        }
+    }
+    &.merge-child{
+        padding: 2px;
+        & .msg-content-container{
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    }
+}
