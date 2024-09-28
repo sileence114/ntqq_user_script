@@ -2,7 +2,7 @@
 @name           less-spacing
 @description    减少元素间距
 @preprocessor   transitio
-@version        0.2.0
+@version        0.2.1
 @homepageURL    https://github.com/sileence114/ntqq_user_script/blob/main/README.md#less-spacing
 @author         sileence114
 @license     	gpl-3.0
@@ -79,13 +79,20 @@ div.recent-contact .recent-contact-list .item__content:not(#_important){
 .merge-message:not(#_important) .merge:not(#_important){
     &.merge-main{
         padding: 6px 2px 2px;
-        & .msg-content-container{
+        &:has(.message-container--align-right) .msg-content-container{
+            border-bottom-right-radius: 4px;
+        }
+        &:not(:has(.message-container--align-right)) .msg-content-container{
             border-bottom-left-radius: 4px;
         }
     }
     &.merge-child{
         padding: 2px;
-        & .msg-content-container{
+        &:has(.message-container--align-right) .msg-content-container{
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        &:not(:has(.message-container--align-right)) .msg-content-container{
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
         }
